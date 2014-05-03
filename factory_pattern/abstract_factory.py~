@@ -32,26 +32,26 @@ class PizzaStore(object):
 
 class NYPizzaStore(PizzaStore):
 	def createPizza(self, type):
-		self._ingridientFacotry = NYPizzaIngredientFactory()
+		_ingridientFacotry = NYPizzaIngredientFactory()
 
 		if type == 'cheese':
-			pizza = CheesePizza(self._ingridientFacotry)
+			pizza = CheesePizza(_ingridientFacotry)
 			pizza.name = "New York Cheese Pizza"
 		elif type == 'clam':
-			pizza = ClamPizza(self._ingridientFacotry)
+			pizza = ClamPizza(_ingridientFacotry)
 			pizza.name = "Chicago Clam Pizza"
 
 		return pizza
 
 class ChicagoPizzaStore(PizzaStore):
 	def createPizza(self, type):
-		self._ingridientFacotry = ChicagoPizzaIngredientFactory()
+		_ingridientFacotry = ChicagoPizzaIngredientFactory()
 
 		if type == 'cheese':
-			pizza = CheesePizza(self._ingridientFacotry)
+			pizza = CheesePizza(_ingridientFacotry)
 			pizza.name = "Chicago Cheese Pizza"
 		elif type == 'clam':
-			pizza = ClamPizza(self._ingridientFacotry)
+			pizza = ClamPizza(_ingridientFacotry)
 			pizza.name = "Chicago Clam Pizza"
 
 		return pizza
